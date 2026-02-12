@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ankit | Official Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #020024, #090979, #000);
+    color: white;
+}
+
+section {
+    padding: 90px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.hero {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero img {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 5px solid #00ccff;
+    box-shadow: 0 0 30px #00ccff;
+    margin: auto;
+}
+
+h1 {
+    font-size: 48px;
+    margin-top: 20px;
+    text-shadow: 0 0 20px #00ccff;
+}
+
+h2 {
+    color: #00ccff;
+    letter-spacing: 2px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 30px;
+    border: 2px solid #00ccff;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00ccff;
+    color: black;
+    box-shadow: 0 0 20px #00ccff;
+}
+
+.card {
+    background: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+    margin-bottom: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <img src="c:\Users\pc\Downloads\ChatGPT Image Feb 7, 2026, 04_15_04 PM.png">
+    <h1 id="neonText">ANKIT</h1>
+    <h2>Official Personal Website</h2>
+
+    <div>
+        <button class="btn" onclick="callMe()">📞 Call</button>
+        <button class="btn" onclick="whatsapp()">💬 WhatsApp</button>
+        <button class="btn" onclick="instagram()">📸 Instagram</button>
+        <button class="btn" onclick="email()">📧 Email</button>
+        <button class="btn" onclick="toggleMusic()">🎵 Music</button>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+<div class="card">
+<h2>About Me</h2>
+<p>
+Hello! I am <b>Ankit</b>.  
+This professional website is built using <b>HTML, CSS, and JavaScript</b>.  
+I love gaming, technology, and creating cool digital projects.
+</p>
+</div>
+
+<!-- CONTACT -->
+<div class="card">
+<h2>Contact Information</h2>
+<p>📞 Phone: <b>9821185041</b></p>
+<p>💬 WhatsApp: <b>9845644633</b></p>
+<p>📧 Email: <b>ankitmishra9845644633@gmail.com</b></p>
+</div>
+
+<!-- GAMING -->
+<div class="card">
+<h2>Gaming Profile</h2>
+<p>🎮 Gaming ID: <b>ANKIT_OP_07</b></p>
+<p>🔥 Games: PUBG </p>
+<p>⚡ Style: Competitive </p>
+</div>
+</section>
+
+<footer>
+© 2026 ANKIT | All Rights Reserved
+</footer>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+/* CONTACT */
+function callMe() {
+    location.href = "tel:9821185041";
+}
+function whatsapp() {
+    window.open("https://wa.me/9845644633", "_blank");
+}
+function instagram() {
+    window.open("https://instagram.com/ankitmishra___18", "_blank");
+}
+function email() {
+    location.href = "mailto:ankitmishra9845644633@gmail.com";
+}
+
+/* MUSIC */
+let playing = false;
+const music = document.getElementById("bgMusic");
+function toggleMusic() {
+    if (!playing) {
+        music.play();
+        playing = true;
+    } else {
+        music.pause();
+        playing = false;
+    }
+}
+
+/* NEON ANIMATION */
+setInterval(() => {
+    document.getElementById("neonText").style.textShadow =
+        `0 0 ${Math.random()*30+10}px #00ccff`;
+}, 400);
+
+/* PAGE FADE */
+document.body.style.opacity = 0;
+window.onload = () => {
+    document.body.style.transition = "1.5s";
+    document.body.style.opacity = 1;
+};
+</script>
+
+</body>
+</html>
